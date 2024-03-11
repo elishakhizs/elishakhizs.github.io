@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airport Chauffeur Service</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:black;
+        }
+
+        header {
+            background-color:#333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        section {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Airport Chauffeur Service</h1>
+    </header>
+
+    <section>
+        <h2>Book a Chauffeur</h2>
+        <form id="chauffeurForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="pickupLocation">Pickup Location:</label>
+            <input type="text" id="pickupLocation" required>
+
+            <label for="dropoffLocation">Drop-off Location:</label>
+            <input type="text" id="dropoffLocation" required>
+
+            <button type="button" onclick="submitForm()">Book Now</button>
+        </form>
+    </section>
+
+    <script>
+        function submitForm() {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var pickupLocation = document.getElementById('pickupLocation').value;
+            var dropoffLocation = document.getElementById('dropoffLocation').value;
+
+           
+            console.log('Name:', name);
+            console.log('Email:', email);
+            console.log('Pickup Location:', pickupLocation);
+            console.log('Drop-off Location:', dropoffLocation);
+
+           
+            alert('Booking Successful!');
+        }
+    </script>
+
+</body>
+</html>
